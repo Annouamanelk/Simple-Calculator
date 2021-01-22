@@ -103,7 +103,9 @@ function calculate(arrOperation) {
 }
 
 document.body.addEventListener("keydown", function (e) {
-    if ((e.keyCode <= 111 && e.keyCode >= 96) || e.keyCode == 8 || e.keyCode == 13 || e.key === "c" || e.key === "C") {
+    if (e.key == "0" || e.key == "1" || e.key == "2" || e.key == "3" || e.key == "4" || e.key == "5" ||
+        e.key == "6" || e.key == "7" || e.key == "8" || e.key == "9" || e.key == "/" || e.key == "*" ||
+        e.key == "-" || e.key == "+" || e.keyCode == 8 || e.keyCode == 13 || e.key === "c" || e.key === "C") {
         if (e.key === "Enter") {
             var arrOperation = splitOperation(operationsInput.value)
             var answer = calculate(arrOperation)
@@ -116,9 +118,9 @@ document.body.addEventListener("keydown", function (e) {
 })
 
 equals.addEventListener("click", function () {
-        var arrOperation = splitOperation(operationsInput.value)
-        var answer = calculate(arrOperation)
-        operationsInput.value = answer
+    var arrOperation = splitOperation(operationsInput.value)
+    var answer = calculate(arrOperation)
+    operationsInput.value = answer
 })
 
 C.addEventListener("click", function () {
