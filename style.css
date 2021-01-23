@@ -10,6 +10,13 @@ body {
     background-position : center 30%;
 }
 
+@media screen and (max-width: 414px) {
+    body {
+        background-image : url("chat.jpg");
+        background-size : auto;
+    }
+  }
+
 textarea {
     overflow: hidden;   
     font-size: larger;
